@@ -1,0 +1,12 @@
+import React from 'react';
+ 
+ function Todo() {
+return (
+    <>
+    <input type="checkbox"/>
+    <li>{Todo.task}</li>
+    <button></button>
+    </>
+);
+ }
+ export default Todo;

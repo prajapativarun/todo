@@ -1,0 +1,31 @@
+
+
+//
+import React, { useState } from 'react'
+import './App.css';
+import TodoForm from './Components/TodoForm';
+import TodoList from './Components/TodoList';
+
+
+function App() {
+  // States
+const [todos,setTodos] = useState([]);
+
+  function addTodo(todo) {
+    setTodos([todo, ...todos]); //Todos Array with spread operator
+  }
+ 
+
+
+  return (
+    <div className="App">
+      <header>
+        <h1>Varun's Todo</h1>
+      </header>
+      <TodoForm addTodo={addTodo} />
+      <TodoList/>
+    </div>
+  );
+}
+
+export default App;
